@@ -1,0 +1,8 @@
+notes for the dashboard app:
+
+https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
+https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
+
+https://github.com/mdn/dom-examples/blob/master/web-storage/main.js
+

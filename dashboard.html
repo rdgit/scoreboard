@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+	<meta name="author" content="ggs_isas">
+	<meta name="version" content="0.5">
+    <title>Scoreboard dashboard</title>
+
+    
+   <style>
+		body {
+		  background-color: #73c8d9;
+		}
+		.wrapper {
+				  color: #444;
+					 display: grid;
+					  grid-template-columns: 1fr 1fr;
+	   
+		}
+		.axlegend {
+			font-size: x-large;
+		}
+		.axlinput {
+			font-size: x-large;
+		}
+		.axlbutton {
+			font-size: xx-large;
+		}
+		.ib {
+		display: inline-block;
+	}
+	</style>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  <h6>GGS cricket scoreboard - v1alpha</h6>
+ <div class="wrapper">
+	
+	<div  >
+		<fieldset><legend>Home Team</legend>
+			<fieldset class="ib"><legend>Name</legend>
+				<input type="text"  id="hometeamname">
+			</fieldset>
+			<fieldset class="ib"><legend>Logo</legend>
+				<select  name="hometeamlogo"  id="hometeamlogo">
+					<option value="./img/none.png">-no logo-</option>
+					<option value="./img/logo.png">GGS</option>
+					<option value="./img/scotchcollege2.png">Scotch</option>
+					
+				</select>
+			</fieldset>
+		</fieldset>	
+	</div>
+	
+   <div  >
+		<fieldset><legend>Away Team</legend>
+			<fieldset class="ib"><legend>Name</legend>
+				<input type="text"  id="awayteamname">
+			</fieldset>
+			<fieldset class="ib"><legend>Logo</legend>
+				<select  name="awayteamlogo"  id="awayteamlogo">
+					<option value="./img/none.png">-no logo-</option>
+					<option value="./img/logo.png">GGS</option>
+					<option value="./img/scotchcollege2.png">Scotch</option>
+					
+				</select>
+			</fieldset>
+		</fieldset>	
+	</div>
+	
+	<div class="right-text" style="grid-row-start: 2;grid-column-start: 1" >
+		<fieldset><legend>Score</legend>
+			<fieldset class="ib"><legend>Title</legend>
+				<input type="text"  id="titlename">
+			</fieldset>
+			<fieldset class="ib"><legend>Score</legend>
+				<input type="text"  id="titlescore">
+			</fieldset>
+		</fieldset>
+	
+	</div>
+	
+	<div class="right-text" style="grid-row-start: 3;grid-column-start: 1" >
+	
+		<fieldset><legend>Batter A</legend>
+	
+			<fieldset class="ib"><legend>Batter A strike</legend>
+				<input type="radio" name="strikeindicator" value="a" id="batterastrike">
+			</fieldset>	
+			<fieldset class="ib"><legend>Batter A name</legend>
+				<input type="text" id="battera">
+			</fieldset>	
+			
+			<fieldset class="ib"><legend>Batter A runs</legend>
+				<input type="text"  id="batteraruns">
+			</fieldset>	
+		
+		</fieldset>
+	</div>
+	
+	
+	
+	<div class="right-text" style="grid-row-start: 4;grid-column-start: 1" >
+		<fieldset><legend>Batter B</legend>
+	
+			<fieldset class="ib"><legend>Batter B strike</legend>
+				<input type="radio" name="strikeindicator" value="b" id="batterbstrike">
+			</fieldset>	
+			<fieldset class="ib"><legend>Batter B name</legend>
+				<input type="text" id="batterb">
+			</fieldset>	
+			
+			<fieldset class="ib"><legend>Batter B runs</legend>
+				<input type="text"  id="batterbruns">
+			</fieldset>	
+		
+		</fieldset>
+	</div>
+	
+  
+   <div class="" style="grid-row-start: 5;grid-column-start: 1" >
+		<fieldset><legend>Extras</legend>
+		<input type="text"  id="extras">
+		</fieldset>	
+   </div>
+   
+    <div class="right-text" style="grid-row-start: 6" >
+	
+		<fieldset ><legend>Overs</legend>
+		<input type="text"  id="overs">
+		</fieldset>
+		
+		
+	
+   </div>
+   
+   <div class="right-text" style="grid-row-start: 7" >
+	
+		<fieldset ><legend>Target</legend>
+		<input type="text"  id="targ">
+		</fieldset>
+		
+		
+	
+   </div>
+   
+   
+   
+   
+   <div class="" style="grid-row-start: 8; grid-column-end: span 2">
+	<fieldset class="ib"><legend>Bowler</legend>
+		<input type="text"  id="bowler">
+		</fieldset>
+	<fieldset class="ib"><legend>Bowler OVER</legend>
+		<input type="text"  id="bowlerover">
+	</fieldset>
+	<fieldset class="ib"><legend>Bowler MAID</legend>
+		<input type="text"  id="bowlermaidens">
+	</fieldset>
+	<fieldset class="ib"><legend>Bowler WICKETS</legend>
+		<input type="text"  id="bowlerwickets">
+	</fieldset>
+	<fieldset class="ib"><legend>Bowler RUNS</legend>
+		<input type="text"  id="bowlerruns">
+	</fieldset>
+   </div>
+  
+    
+	
+	
+   
+	
+	
+	<div style="grid-row-start: 2; grid-column-start: 2;grid-row-end: span 6">
+		<fieldset class="ib"><legend>Batting</legend>
+			<textarea id="bathx" rows="5" cols="33">abc &#13; 123 &#13; xyz &#13;
+			</textarea>
+		</fieldset>
+	</div>
+
+
+  </div>
+  
+  <fieldset><legend>Scoreboard controls</legend>
+  <div id="controls">
+	Scoreboard dash.
+		<button id="btnUpdate">Update</button>
+		<button id="btnReset" disabled>Reset</button>
+		<button id="btnClearStrike" disabled>Clear strike</button>
+		<input style=" type="text" id="strikeindicator">
+		
+		
+		
+		
+    <fieldset class="ib"><legend>Message</legend>
+		<input type="text"  id="message">
+		</fieldset>
+		
+  </div>
+  </fieldset>
+  </body>
+ 
+  <script>
+	const ggs = {
+	  userkeys: [
+				{key:'hometeamname', def: 'GGS'}
+				,{key:'awayteamname', def: 'SC'}
+				,{key:'battera', def: 'Tweedledum'}
+				,{key:'batterb', def: 'Tweedledee'}
+				
+				,{key:'strikeindicator', def: ''}
+				,{key:'batteraruns', def: '107'}
+				,{key:'batterbruns', def: '87'}
+				,{key:'extras', def: '0'}
+				,{key:'wickets', def: '0'}
+				,{key:'score', def: '194'}
+				,{key:'overs', def: '3'}
+				,{key:'bowler', def: 'Hampstead'}
+				,{key:'bowlerscore', def: '5/4'}
+				,{key:'message', def: 'THE LAST DANCE'}
+				,{key:'bathx', def: ''}
+				,{key:'hometeamlogo',def:'/img/none.png'}
+				,{key:'awayteamlogo',def:'/img/none.png'}
+				,{key:'bowler', def: 'Hampstead'}
+				,{key:'bowlerover', def: '9'}
+				,{key:'bowlermaidens', def: '0'}
+				,{key:'bowlerwickets', def: '3'}
+				,{key:'bowlerruns', def: '55'}
+				//,{key:'message', def: 'THE LAST DANCE'}
+				,{key:'titlename', def: 'GGS'}
+				,{key:'titlescore', def: '9-278'}
+				,{key:'targ',def: '275'} 
+			],
+	  getObj() {
+		return this.uk;
+	  }
+	};
+	
+	function preflight(){
+		console.info('prefligt');
+		ggs.userkeys.forEach(function(item, i){
+		 if (window.localStorage[item.key]){
+			console.info(window.localStorage[item.key]);
+			if (document.getElementById(item.key)){
+				document.getElementById(item.key).value = window.localStorage[item.key];
+			} 
+		 } else {
+			if (document.getElementById(item.key)){
+				document.getElementById(item.key).value = item.def;
+			} 
+		 }
+		});
+	}
+	preflight();
+	
+	document.querySelectorAll("input[name='strikeindicator']").forEach((input) => {
+        input.addEventListener('change', function(e){
+			
+			console.info(e.target.value);
+			document.getElementById('strikeindicator').value = e.target.value;
+		});
+    });
+	
+	
+	document.getElementById('btnUpdate').addEventListener('click', function(e) {
+		//console.info('clickk');
+		
+		ggs.userkeys.forEach(function(item, i){
+			console.info(item.key);
+			if (document.getElementById(item.key)){
+				localStorage.setItem(item.key,document.getElementById(item.key).value);
+			}
+			
+		});
+		//localStorage.setItem('bathx',document.getElementById('bathx').value);
+		
+		//localStorage.setItem('batteam', document.getElementById('batteam').value);
+	});
+  
+	
+  </script>
+</html>
